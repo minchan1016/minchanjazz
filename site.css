@@ -114,6 +114,7 @@ body.ko .hero h1 { font-size: clamp(60px, 10vw, 136px); line-height: 1.02; }
 .visual .stripe { position: absolute; right: 0; top: 0; bottom: 0; width: 34%; background: var(--stripe); border-radius: 4px; overflow: hidden; box-shadow: 0 30px 60px -40px rgba(0,0,0,.45); }
 .visual .stripe .tag { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%) rotate(180deg); writing-mode: vertical-rl; font-family: var(--font-display); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.85); white-space: nowrap; }
 .visual .photo { position: absolute; left: 0; top: 7%; width: 76%; height: 86%; border-radius: 4px; overflow: hidden; background: var(--paper-2); border: 2px solid var(--ink); animation: rise .9s cubic-bezier(.2,.7,.2,1) both; animation-delay: calc(var(--beat) * 2); }
+.visual .photo .cap { position: absolute; right: 10px; bottom: 8px; font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: rgba(237,233,222,.85); background: rgba(21,20,17,.55); padding: 3px 8px; border-radius: 999px; }
 .visual .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 62% 40%; display: block; filter: saturate(.92) contrast(1.05); }
 .cymbal { position: absolute; left: -34px; bottom: -22px; width: 170px; height: 170px; animation: spin 26s linear infinite; filter: drop-shadow(0 14px 18px rgba(0,0,0,.28)); }
 .cymbal:hover { animation: spin 26s linear infinite, wobble .5s ease; }
@@ -161,7 +162,8 @@ body.ko .q p { font-family: var(--font-display-ko); text-transform: none; font-s
 .strip figure { margin: 0; position: relative; border-radius: 4px; overflow: hidden; aspect-ratio: 3 / 2; max-width: 100%; background: var(--paper-2); }
 .strip img, .band img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .strip figcaption, .photos figcaption { position: absolute; left: 10px; bottom: 8px; font-size: 10.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #EDE9DE; background: rgba(21,20,17,.72); padding: 3px 8px; border-radius: 999px; }
-@media (max-width: 760px) { .strip { grid-template-columns: 1fr; } }
+.strip.tall figure { aspect-ratio: 4 / 5; }
+@media (max-width: 760px) { .strip { grid-template-columns: 1fr; } .strip.tall figure { aspect-ratio: 4 / 5; } }
 .band { position: relative; height: clamp(260px, 42vw, 520px); overflow: hidden; border-bottom: 1px solid var(--line); }
 .band img { object-position: 50% 30%; filter: contrast(1.04); }
 .band .cap { position: absolute; left: clamp(16px, 4vw, 48px); bottom: 18px; font-family: var(--font-display); font-size: clamp(13px, 1.4vw, 15px); letter-spacing: .14em; text-transform: uppercase; color: #EDE9DE; background: rgba(21,20,17,.6); padding: 6px 12px; border-radius: 999px; }
