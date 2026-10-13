@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Press &amp; Performances · Minchan Kim</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Black+Han+Sans&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="stick" viewBox="0 0 24 24"><path d="M3 21 L17 7" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" fill="none"/><path d="M3 21 L16.5 7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none" opacity=".5"/><circle cx="18.6" cy="5.4" r="2.6" fill="currentColor"/></symbol>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="mark" href="index.html" data-page="index.html"><span>Minchan Kim</span></a>
+    <nav class="links" id="links">
+      <a href="index.html" data-page="index.html" data-i="nav.home">Home</a>
+      <a href="about.html" data-page="about.html" data-i="nav.story">My story</a>
+      <a href="press.html" class="here" data-page="press.html" data-i="nav.press">Press &amp; performances</a>
+      <a href="partners.html" data-page="partners.html" data-i="nav.partners">Partners</a>
+      <a href="index.html#lessons" data-i="nav.lessons">Lessons</a>
+      <a href="index.html#contact" data-i="nav.contact">Contact</a>
+    </nav>
+    <div class="navr">
+      <div class="lang" role="group" aria-label="Language"><button type="button" class="on" data-lang="en">EN</button><button type="button" data-lang="ko">한국어</button></div>
+      <a class="btn solid cal" href="#" target="_blank" rel="noopener" data-i="nav.book">Book a call</a>
+      <button class="btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="links" data-i="nav.menu">Menu</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="pagehead">
+    <div class="wrap">
+      <div class="head">
+        <a class="crumb" href="index.html" data-page="index.html" data-i="crumb">← Home</a>
+        <p class="eyebrow"><svg class="stick"><use href="#stick"/></svg><span data-i="ph.eyebrow">Press &amp; performances</span></p>
+        <h1 class="display" data-i="ph.h1">Everything on tape.</h1>
+        <p data-i="ph.intro">Live videos, recordings, interviews and photos, in one place. For promoters and press: the short bio and photo at the bottom are free to use.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="videos">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow"><svg class="stick"><use href="#stick"/></svg><span data-i="v.eyebrow">Videos</span></p>
+        <h2 class="display" data-i="v.h2">Live, mostly.</h2>
+        <p data-i="v.intro">Newest first. Links are added as the recordings go up.</p>
+      </div>
+      <div class="videos" id="videoArchive"></div>
+    </div>
+  </section>
+
+  <section class="block" id="press">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow"><svg class="stick"><use href="#stick"/></svg><span data-i="p.eyebrow">Press &amp; recordings</span></p>
+        <h2 class="display" data-i="p.h2">In print and on record.</h2>
+      </div>
+      <div class="presslist" id="pressList"></div>
+    </div>
+  </section>
+
+  <section class="block" id="photos">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow"><svg class="stick"><use href="#stick"/></svg><span data-i="g.eyebrow">Photos</span></p>
+        <h2 class="display" data-i="g.h2">For posters and programmes.</h2>
+        <p data-i="g.intro">High-resolution versions on request. Please credit the photographer where one is named.</p>
+      </div>
+      <div class="photos" id="photoGrid"></div>
+    </div>
+  </section>
+
+  <section class="block" id="bio">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow"><svg class="stick"><use href="#stick"/></svg><span data-i="b.eyebrow">Short bio</span></p>
+        <h2 class="display" data-i="b.h2">Copy and paste.</h2>
+      </div>
+      <div class="article">
+        <div class="prose" id="bioText" data-i="b.text">
+          <p>Minchan Kim is a jazz drummer and composer based between Seoul and New York. Born in Daejeon and trained at Kyunghee University, he came to jazz through bassist Martin Zenker and found his voice on a televised stage with saxophonist Jesse Davis, released as <em>Soul Searchin': Live in Seoul</em> (Nagel Heyer, 2017). He has since played around a hundred cities in more than thirty-five countries, from Smalls in New York to Marians Jazzroom in Bern and Fat Cat in Ulaanbaatar, with musicians including Jesse Davis, Martin Zenker, Tony Lakatos, Ilan Eisenzweig and Daniel Ko. He leads his own groups, teaches, and is currently recording his first album under his own name and writing a book for people who have never listened to jazz.</p>
+        </div>
+        <aside class="side">
+          <button class="btn solid" type="button" id="copyBio" data-i="b.copy">Copy the bio</button>
+          <p style="color:var(--muted);font-size:14px" data-i="b.note">Press enquiries: use the contact form or email below.</p>
+          <p><code data-email style="font-weight:700">minchan1016@gmail.com</code></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="bar"></div>
+    <div class="row">
+      <span data-i="foot.copy">© 2026 Minchan Kim · Jazz drummer &amp; composer · Seoul / New York</span>
+      <nav>
+        <a href="index.html" data-page="index.html" data-i="nav.home2">Home</a><a href="about.html" data-page="about.html" data-i="nav.story2">My story</a><a href="index.html#contact" data-i="nav.contact2">Contact</a><a data-ig href="https://www.instagram.com/minchan_jazz/" target="_blank" rel="noopener">Instagram</a>
+        <span class="lang" role="group" aria-label="Language"><button type="button" class="on" data-lang="en">EN</button><button type="button" data-lang="ko">한국어</button></span>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<div class="fab" id="fab" aria-label="Contact">
+  <span class="dot" aria-hidden="true"></span><span class="t" data-i="fab.t">Want to work together?</span>
+  <a class="btn lime cal" href="#" target="_blank" rel="noopener" data-i="fab.call">Book a call</a>
+  <a class="btn ghost" href="index.html#contact" data-i="fab.msg">Message</a>
+</div>
+
+<script>
+window.KO = {
+  'nav.home': '홈', 'nav.story': '제 이야기', 'nav.press': '공연과 기사', 'nav.partners': '파트너', 'nav.lessons': '레슨', 'nav.contact': '연락', 'nav.book': '통화 예약', 'nav.menu': '메뉴',
+  'nav.home2': '홈', 'nav.story2': '제 이야기', 'nav.contact2': '연락',
+  'crumb': '← 홈', 'ph.eyebrow': '공연과 기사', 'ph.h1': '기록으로 남은 것들.',
+  'ph.intro': '라이브 영상, 음반, 인터뷰, 사진을 한곳에 모았습니다. 기획자와 기자분들은 맨 아래 짧은 소개글과 사진을 자유롭게 쓰셔도 됩니다.',
+  'v.eyebrow': '영상', 'v.h2': '대부분 라이브입니다.', 'v.intro': '최신순입니다. 녹화가 올라오는 대로 링크를 답니다.',
+  'p.eyebrow': '기사와 음반', 'p.h2': '지면과 음반에 남은 것.',
+  'g.eyebrow': '사진', 'g.h2': '포스터와 프로그램용.', 'g.intro': '고해상도 원본은 요청하시면 보내 드립니다. 사진가 이름이 있는 경우 크레딧을 적어 주세요.',
+  'b.eyebrow': '짧은 소개', 'b.h2': '복사해서 쓰세요.',
+  'b.text': '<p>김민찬은 서울과 뉴욕을 오가며 활동하는 재즈 드러머이자 작곡가다. 대전에서 태어나 경희대학교에서 공부했고, 베이시스트 마틴 젠커를 통해 재즈를 만났다. 색소포니스트 제시 데이비스와 리허설 없이 선 방송 무대는 《Soul Searchin\': Live in Seoul》(Nagel Heyer, 2017)로 발매됐다. 이후 뉴욕 스몰스, 베른 Marians Jazzroom, 울란바토르 Fat Cat 등 35개국 이상 100여 도시의 무대에 섰으며, 제시 데이비스, 마틴 젠커, 토니 라카토스, 일란 아이젠즈베그, 다니엘 고 등과 함께 연주했다. 자신의 그룹을 이끌고 가르치며, 현재 자기 이름을 건 첫 앨범을 녹음하고 재즈를 들어 본 적 없는 사람들을 위한 책을 쓰고 있다.</p>',
+  'b.copy': '소개글 복사', 'b.note': '취재 문의는 문의 양식이나 아래 이메일로 보내 주세요.',
+  'foot.copy': '© 2026 김민찬 · 재즈 드러머 & 작곡가 · 서울 / 뉴욕',
+  'fab.t': '같이 일해 볼까요?', 'fab.call': '통화 예약', 'fab.msg': '메시지'
+};
+</script>
+<script src="content.js"></script>
+<script src="site.js"></script>
+<script>
+(function(){ var b=document.getElementById('copyBio'); if(!b) return; b.addEventListener('click', function(){ var txt=document.getElementById('bioText').innerText.trim(); if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(function(){ var t=document.createElement('div'); t.className='toast'; t.textContent=document.body.classList.contains('ko')?'복사했습니다':'Copied'; document.body.appendChild(t); setTimeout(function(){t.remove();},2000); }).catch(function(){}); } }); })();
+</script>
+</body>
+</html>
