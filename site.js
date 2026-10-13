@@ -131,7 +131,8 @@
   /* ---------- forms: Netlify Forms when the site is on Netlify, e-mail fallback elsewhere ---------- */
   var SENT = { en: { notify: 'Done. You will hear from me when a show is announced.', contact: 'Sent. I read every message myself and will reply soon.', fail: 'Could not send. Please email ' }, ko: { notify: '신청됐습니다. 공연이 잡히면 알려 드릴게요.', contact: '보냈습니다. 제가 직접 읽고 곧 답하겠습니다.', fail: '전송에 실패했습니다. 이메일로 보내 주세요: ' } };
   function netlifyPost(form) {
-    if (!form.hasAttribute('data-netlify') || location.protocol === 'file:') return Promise.reject(new Error('no-netlify'));
+    /* Netlify strips data-netlify at deploy time, so detect the hidden form-name field instead */
+    if (!form.querySelector('input[name="form-name"]') || location.protocol === 'file:' || /claudeusercontent|claude\.ai$/.test(location.hostname)) return Promise.reject(new Error('no-netlify'));
     var fd = new FormData(form); var body = new URLSearchParams(); fd.forEach(function (v, k) { body.append(k, v); });
     return fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() }).then(function (r) { if (!r.ok) throw new Error('bad status'); });
   }
