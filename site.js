@@ -128,14 +128,24 @@
     links.addEventListener('click', function (e) { if (e.target.tagName === 'A') { links.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); } });
   }
 
-  /* ---------- forms (no backend yet: prepare an email) ---------- */
+  /* ---------- forms: Netlify Forms when the site is on Netlify, e-mail fallback elsewhere ---------- */
+  var SENT = { en: { notify: 'Done. You will hear from me when a show is announced.', contact: 'Sent. I read every message myself and will reply soon.', fail: 'Could not send. Please email ' }, ko: { notify: '신청됐습니다. 공연이 잡히면 알려 드릴게요.', contact: '보냈습니다. 제가 직접 읽고 곧 답하겠습니다.', fail: '전송에 실패했습니다. 이메일로 보내 주세요: ' } };
+  function netlifyPost(form) {
+    if (!form.hasAttribute('data-netlify') || location.protocol === 'file:') return Promise.reject(new Error('no-netlify'));
+    var fd = new FormData(form); var body = new URLSearchParams(); fd.forEach(function (v, k) { body.append(k, v); });
+    return fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() }).then(function (r) { if (!r.ok) throw new Error('bad status'); });
+  }
   var nf = document.getElementById('notifyForm');
   if (nf) nf.addEventListener('submit', function (e) {
     e.preventDefault();
     var email = document.getElementById('notifyEmail').value.trim();
     if (!email || email.indexOf('@') < 0) { toast(STR[lang].badEmail); return; }
-    var body = STR[lang].bodyNotify + email; copyText(body, null);
-    window.location.href = 'mailto:' + C.email + '?subject=' + encodeURIComponent(STR[lang].subjNotify) + '&body=' + encodeURIComponent(body);
+    var btn = nf.querySelector('button'); btn.disabled = true;
+    netlifyPost(nf).then(function () { toast(SENT[lang].notify); nf.reset(); btn.disabled = false; }).catch(function () {
+      btn.disabled = false;
+      var body = STR[lang].bodyNotify + email; copyText(body, null);
+      window.location.href = 'mailto:' + C.email + '?subject=' + encodeURIComponent(STR[lang].subjNotify) + '&body=' + encodeURIComponent(body);
+    });
   });
   var cf = document.getElementById('contactForm'), status = document.getElementById('formStatus');
   if (cf) cf.addEventListener('submit', function (e) {
@@ -144,11 +154,15 @@
     var sel = document.getElementById('cType'), type = sel.options[sel.selectedIndex].text;
     var when = document.getElementById('cWhen').value.trim(), msg = document.getElementById('cMsg').value.trim();
     if (!name || !email || email.indexOf('@') < 0) { status.textContent = STR[lang].needName; return; }
-    var subject = type + ' · ' + name;
-    var body = (lang === 'ko' ? '민찬님, 안녕하세요.\n\n' : 'Hi Minchan,\n\n') + (msg || '-') + '\n\n' + (lang === 'ko' ? '문의: ' : 'About: ') + type + (when ? '\n' + (lang === 'ko' ? '시기: ' : 'When: ') + when : '') + '\n' + (lang === 'ko' ? '보낸 사람: ' : 'From: ') + name + ' <' + email + '>';
-    copyText(body, null);
-    status.innerHTML = STR[lang].done + '<a href="mailto:' + C.email + '">' + C.email + '</a>';
-    window.location.href = 'mailto:' + C.email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    var btn = cf.querySelector('button[type=submit]'); btn.disabled = true;
+    netlifyPost(cf).then(function () { status.textContent = SENT[lang].contact; cf.reset(); btn.disabled = false; }).catch(function () {
+      btn.disabled = false;
+      var subject = type + ' · ' + name;
+      var body = (lang === 'ko' ? '민찬님, 안녕하세요.\n\n' : 'Hi Minchan,\n\n') + (msg || '-') + '\n\n' + (lang === 'ko' ? '문의: ' : 'About: ') + type + (when ? '\n' + (lang === 'ko' ? '시기: ' : 'When: ') + when : '') + '\n' + (lang === 'ko' ? '보낸 사람: ' : 'From: ') + name + ' <' + email + '>';
+      copyText(body, null);
+      status.innerHTML = SENT[lang].fail + '<a href="mailto:' + C.email + '">' + C.email + '</a>';
+      window.location.href = 'mailto:' + C.email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    });
   });
 
   /* ---------- floating contact: appears after the hero, hides over the contact section ---------- */

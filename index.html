@@ -109,7 +109,8 @@
       <div class="shows" id="showsList"></div>
       <div class="notice" id="notify">
         <p data-i="notify.p"><strong>Get the dates before the posters.</strong> One short email when a show is announced. Nothing else.</p>
-        <form id="notifyForm" novalidate>
+        <form id="notifyForm" name="notify" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="notify"><input type="text" name="bot-field" tabindex="-1" autocomplete="off" style="display:none">
           <input type="email" id="notifyEmail" name="email" placeholder="you@email.com" aria-label="Email address" required data-i-ph="notify.ph">
           <button class="btn solid" type="submit" data-i="notify.btn">Keep me posted</button>
         </form>
@@ -232,7 +233,8 @@
             <div class="row"><span class="k" data-i="d.based">Based in</span><code data-i="d.basedv">Seoul, KST (UTC+9)</code></div>
           </div>
         </div>
-        <form class="form" id="contactForm" novalidate>
+        <form class="form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="contact"><input type="text" name="bot-field" tabindex="-1" autocomplete="off" style="display:none">
           <div class="two">
             <div class="field"><label for="cName" data-i="fm.name">Your name</label><input id="cName" name="name" type="text" autocomplete="name" required></div>
             <div class="field"><label for="cEmail" data-i="fm.email">Your email</label><input id="cEmail" name="email" type="email" autocomplete="email" required></div>
@@ -252,7 +254,7 @@
           <div class="field"><label for="cMsg" data-i="fm.msg">Message</label><textarea id="cMsg" name="message" placeholder="Venue, format, budget range, and anything else that helps." data-i-ph="fm.msg.ph"></textarea></div>
           <div class="foot">
             <button class="btn solid" type="submit" data-i="fm.send">Send message</button>
-            <p class="status" id="formStatus" data-i="fm.status">Opens your email app with the message filled in, or copies it so you can paste it anywhere.</p>
+            <p class="status" id="formStatus" data-i="fm.status">Goes straight to my inbox. I reply myself, usually within a few days.</p>
           </div>
         </form>
       </div>
@@ -320,7 +322,7 @@ window.KO = {
   'fm.name': '이름', 'fm.email': '이메일', 'fm.type': '어떤 일인가요',
   'fm.options': '<option value="Performance booking">공연 섭외</option><option value="Lessons">레슨</option><option value="Collaboration">협업</option><option value="Press or brand">언론·브랜드</option><option value="Something else">그 외</option>',
   'fm.when': '언제', 'fm.when.ph': '예: 2026년 12월 12일, 서울', 'fm.msg': '메시지', 'fm.msg.ph': '공연장, 편성, 예산 범위, 그 밖에 도움이 될 내용을 적어 주세요.',
-  'fm.send': '메시지 보내기', 'fm.status': '메일 앱이 열리고 내용이 채워집니다. 열리지 않으면 복사된 내용을 어디에나 붙여 넣으면 됩니다.',
+  'fm.send': '메시지 보내기', 'fm.status': '제 메일함으로 바로 들어옵니다. 보통 며칠 안에 제가 직접 답합니다.',
   'foot.copy': '© 2026 김민찬 · 재즈 드러머 & 작곡가 · 서울 / 뉴욕', 'foot.story': '제 이야기', 'foot.press': '공연과 기사', 'foot.contact': '연락',
   'fab.t': '같이 일해 볼까요?', 'fab.call': '통화 예약', 'fab.msg': '메시지'
 };
