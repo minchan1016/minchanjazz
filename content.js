@@ -88,7 +88,7 @@ window.CONTENT = {
 
   /* Partners & endorsements. status: "endorsed" | "using" | "recommend". link/code are optional (affiliate or special links go here). */
   partners: [
-    { status: "endorsed", since: "", link: "http://www.soundzaid.com/", code: "", img: "",
+    { status: "endorsed", since: "", link: "http://www.soundzaid.com/", code: "", img: "img/soundzaid-iem.jpg",
       cat: { en: "In-ear monitors", ko: "인이어 모니터" },
       name: { en: "SOUNDZAID", ko: "사운즈에이드 (SOUNDZAID)" },
       what: { en: "My custom in-ears, and my longtime official supporter.", ko: "제 전용 이어폰을 만들어 주는, 오랜 공식 후원자입니다." },
