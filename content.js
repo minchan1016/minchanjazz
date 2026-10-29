@@ -88,11 +88,11 @@ window.CONTENT = {
 
   /* Partners & endorsements. status: "endorsed" | "using" | "recommend". link/code are optional (affiliate or special links go here). */
   partners: [
-    { status: "endorsed", since: "2025", link: "", code: "",
+    { status: "endorsed", since: "", link: "http://www.soundzaid.com/", code: "", img: "",
       cat: { en: "In-ear monitors", ko: "인이어 모니터" },
-      name: { en: "[Brand name]", ko: "[브랜드명]" },
-      what: { en: "The in-ears I wear on every stage and in the studio.", ko: "모든 무대와 스튜디오에서 쓰는 인이어입니다." },
-      why: { en: "I need to hear the bass player's attack and the piano's left hand at the same time, at club volume, without my ears ringing the next morning. These do that. I wore them before anyone offered me a deal, which is the only reason I say yes to one.", ko: "클럽 볼륨에서 베이스의 어택과 피아노 왼손을 동시에 들어야 하고, 다음 날 아침 귀가 울리면 안 됩니다. 이 인이어가 그걸 해 줍니다. 계약 제안을 받기 전부터 쓰고 있었고, 그래서 제안을 받아들였습니다." } },
+      name: { en: "SOUNDZAID", ko: "사운즈에이드 (SOUNDZAID)" },
+      what: { en: "My custom in-ears, and my longtime official supporter.", ko: "제 전용 이어폰을 만들어 주는, 오랜 공식 후원자입니다." },
+      why: { en: "On stage the most important thing is hearing each other exactly. SOUNDZAID builds the fine, detailed monitor sound that musicians rely on on stage, and my own custom in-ears come from them. They have supported me for a long time, and I am proud to call them my official partner.", ko: "무대 위에서 가장 중요한 것은 서로의 소리를 정확하게 듣는 일입니다. 사운즈에이드는 뮤지션들이 무대에서 사용하는 섬세하고 세밀한 모니터 사운드를 제공하는 곳이고, 제 전용 이어폰도 이곳에서 만들어졌습니다. 오랜 시간 변함없이 저를 후원해 주신 공식 파트너입니다." } },
     { status: "endorsed", since: "2026", link: "", code: "",
       cat: { en: "Drumsticks", ko: "드럼스틱" },
       name: { en: "[Brand name]", ko: "[브랜드명]" },

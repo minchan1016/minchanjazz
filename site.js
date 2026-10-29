@@ -85,7 +85,8 @@
       var btns = '';
       if (p.link) btns += '<a class="btn solid" href="' + esc(p.link) + '" target="_blank" rel="noopener">' + (lang === 'ko' ? '사이트 보기' : 'Visit') + ' ↗</a>';
       if (p.code) btns += '<button class="copy big" type="button" data-copy="' + esc(p.code) + '">' + (lang === 'ko' ? '코드 복사: ' : 'Copy code: ') + esc(p.code) + '</button>';
-      return '<article class="partner"><div class="ptop"><span class="chip ' + (p.status === 'endorsed' ? 'hot' : '') + '">' + esc(t(st)) + '</span><span class="since">' + (lang === 'ko' ? p.since + '년부터' : 'since ' + p.since) + '</span></div>' +
+      return '<article class="partner"><div class="ptop"><span class="chip ' + (p.status === 'endorsed' ? 'hot' : '') + '">' + esc(t(st)) + '</span><span class="since">' + (p.since ? (lang === 'ko' ? p.since + '년부터' : 'since ' + p.since) : '') + '</span></div>' +
+        (p.img ? '<div class="pimg"><img src="' + esc(p.img) + '" alt="' + esc(t(p.name)) + '" loading="lazy"></div>' : '') +
         '<p class="eyebrow">' + esc(t(p.cat)) + '</p><h3>' + esc(t(p.name)) + '</h3><p class="what">' + esc(t(p.what)) + '</p>' +
         '<p class="whylbl">' + (lang === 'ko' ? '왜 쓰는가' : 'Why I use it') + '</p><p class="why">' + esc(t(p.why)) + '</p>' +
         (btns ? '<div class="pbtns">' + btns + '</div>' : '') + '</article>';
