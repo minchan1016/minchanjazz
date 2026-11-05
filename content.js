@@ -98,7 +98,7 @@ window.CONTENT = {
       name: { en: "Colors Drum Co.", ko: "Colors Drum Co." },
       what: { en: "The sticks in my bag since this year.", ko: "올해부터 가방에 들어 있는 스틱입니다." },
       why: { en: "A stick has to disappear in my hand. Balance before weight, a tip that gives a clear ride sound at low volume, and consistency from pair to pair. The company reached out after following my work for a while and asked what I actually play. That is how I like to start.", ko: "스틱은 손에서 사라져야 합니다. 무게보다 균형, 작은 볼륨에서도 라이드 소리가 또렷한 팁, 그리고 짝마다 같은 품질. 이 회사는 제 연주를 한동안 지켜본 뒤 연락해서 제가 실제로 뭘 쓰는지부터 물었습니다. 저는 그렇게 시작하는 관계가 좋습니다." } },
-    { status: "recommend", since: "2026", link: "https://www.withminlim.com", code: "",
+    { status: "recommend", since: "2026", link: "https://www.withminlim.com", code: "", img: "img/minlim-coaching.jpg",
       cat: { en: "Coaching", ko: "코칭" },
       name: { en: "Min Lim Coaching", ko: "Min Lim Coaching" },
       what: { en: "Executive and life coaching for people who build things, in Korean and English. Min is my coach.", ko: "무언가를 만드는 사람들을 위한 코칭. 한국어와 영어로 진행합니다. 제 코치입니다." },
