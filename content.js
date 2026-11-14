@@ -10,11 +10,18 @@ window.CONTENT = {
 
   shows: [
     {
-      day: "16–17", when: { en: "Oct 2026", ko: "2026년 10월" },
-      title: { en: "Jazzkeller, Frankfurt", ko: "Jazzkeller, 프랑크푸르트" },
-      desc: { en: "Two nights at Frankfurt's historic jazz club, with a European quartet.", ko: "프랑크푸르트의 오래된 재즈 클럽에서 유럽 쿼텟과 함께하는 이틀 밤." },
-      chips: [{ en: "Next show", ko: "다음 공연", hot: true }, { en: "Germany", ko: "독일" }, { en: "Two nights", ko: "이틀 공연" }],
-      link: "https://www.jazzkeller.com/", linkLabel: { en: "Tickets", ko: "티켓" }
+      day: "12", when: { en: "Dec 2026", ko: "2026년 12월" },
+      title: { en: "Sound Dog Jazz Club, Seoul", ko: "Sound Dog Jazz Club, 서울" },
+      desc: { en: "Minchan Kim Trio live in Seoul. 8 PM.", ko: "김민찬 트리오 서울 공연. 오후 8시." },
+      chips: [{ en: "Next show", ko: "다음 공연", hot: true }, { en: "Seoul", ko: "서울" }, { en: "Trio", ko: "트리오" }],
+      link: "https://www.instagram.com/minchan_jazz/", linkLabel: { en: "Details", ko: "자세히" }, ghost: true
+    },
+    {
+      day: "26", when: { en: "Dec 2026", ko: "2026년 12월" },
+      title: { en: "Bard Chamber House, Gongju", ko: "바드 챔버하우스, 공주" },
+      desc: { en: "Minchan Kim Trio live in Gongju. 5 PM.", ko: "김민찬 트리오 공주 공연. 오후 5시." },
+      chips: [{ en: "Gongju", ko: "공주" }, { en: "Trio", ko: "트리오" }],
+      link: "https://www.instagram.com/minchan_jazz/", linkLabel: { en: "Details", ko: "자세히" }, ghost: true
     },
     {
       day: "TBA", dayKo: "미정", when: { en: "Seoul", ko: "서울" },
@@ -26,6 +33,7 @@ window.CONTENT = {
   ],
 
   past: [
+    { en: "Jazzkeller, Frankfurt · Oct 2026", ko: "Jazzkeller, 프랑크푸르트 · 2026년 10월" },
     { en: "Fat Cat Jazz Club, Ulaanbaatar · tour & masterclass, Aug 2026", ko: "Fat Cat Jazz Club, 울란바토르 · 투어와 마스터클래스, 2026년 8월" },
     { en: "Jeju Island · Jul 2026", ko: "제주 · 2026년 7월" },
     { en: "Spain tour · Jun 2026", ko: "스페인 투어 · 2026년 6월" },
