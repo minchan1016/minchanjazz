@@ -22,13 +22,6 @@ window.CONTENT = {
       desc: { en: "Minchan Kim Trio live in Gongju. 5 PM.", ko: "김민찬 트리오 공주 공연. 오후 5시." },
       chips: [{ en: "Gongju", ko: "공주" }, { en: "Trio", ko: "트리오" }],
       link: "https://www.instagram.com/minchan_jazz/", linkLabel: { en: "Details", ko: "자세히" }, ghost: true
-    },
-    {
-      day: "TBA", dayKo: "미정", when: { en: "Seoul", ko: "서울" },
-      title: { en: "Minchan Kim Group, Seoul", ko: "김민찬 그룹, 서울" },
-      desc: { en: "A home-court night with my own band and new material. Date and venue announced here first.", ko: "제 밴드와 새 곡으로 꾸미는 홈 무대입니다. 날짜와 장소는 여기서 가장 먼저 알립니다." },
-      chips: [{ en: "Korea", ko: "한국" }, { en: "Own music", ko: "자작곡" }],
-      link: "#notify", linkLabel: { en: "Notify me", ko: "알림 받기" }, ghost: true
     }
   ],
 
