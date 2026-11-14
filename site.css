@@ -280,8 +280,8 @@ body.ko .pressitem .y { font-family: var(--font-display-ko); }
 @media (max-width: 860px) { .photos { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 
 /* ---------- lessons ---------- */
-#lessons .head h2 { font-size: clamp(52px, 8.4vw, 108px); line-height: .94; }
-body.ko #lessons .head h2 { font-size: clamp(44px, 7.2vw, 92px); line-height: 1.04; }
+#lessons .head h2 { font-size: clamp(46px, 6.8vw, 88px); line-height: .95; }
+body.ko #lessons .head h2 { font-size: clamp(38px, 5.9vw, 74px); line-height: 1.06; }
 .lessons { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(28px, 5vw, 72px); align-items: start; }
 .principles { border-top: 1px solid var(--line); }
 .pr { display: grid; grid-template-columns: 56px minmax(0,1fr); gap: 16px; padding: 22px 0; border-bottom: 1px solid var(--line); }
