@@ -234,6 +234,7 @@ body.ko .show .date small { font-family: var(--font-body-ko); letter-spacing: .0
 .chip { font-size: 11.5px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; border: 1.5px solid var(--line); color: var(--ink-2); }
 body.ko .chip { letter-spacing: .02em; }
 .chip.hot { background: var(--lime); color: #151411; border-color: var(--lime); }
+.chip.rec { background: var(--orange); color: #151411; border-color: var(--orange); }
 .show .act { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
 @media (max-width: 700px) { .show { grid-template-columns: 1fr; gap: 10px; } .show .act { justify-content: flex-start; } }
 .notice { margin-top: 24px; display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 16px; align-items: center; padding: 22px 24px; border-radius: 6px; background: var(--paper-2); }
@@ -280,8 +281,6 @@ body.ko .pressitem .y { font-family: var(--font-display-ko); }
 @media (max-width: 860px) { .photos { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 
 /* ---------- lessons ---------- */
-#lessons .head h2 { font-size: clamp(46px, 6.8vw, 88px); line-height: .95; }
-body.ko #lessons .head h2 { font-size: clamp(38px, 5.9vw, 74px); line-height: 1.06; }
 .lessons { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(28px, 5vw, 72px); align-items: start; }
 .principles { border-top: 1px solid var(--line); }
 .pr { display: grid; grid-template-columns: 56px minmax(0,1fr); gap: 16px; padding: 22px 0; border-bottom: 1px solid var(--line); }
@@ -344,6 +343,9 @@ body.ko .areyou .head h2 { font-size: clamp(44px, 7vw, 92px); line-height: 1.05;
 body.ko .direct .k { letter-spacing: .04em; }
 .direct code { font-family: inherit; font-weight: 700; font-size: 16px; user-select: all; }
 .direct code a { text-decoration: none; }
+.direct code a.cal, .direct code a[data-ig] { color: var(--ink); text-decoration: underline; text-decoration-color: var(--orange); text-decoration-thickness: 2px; text-underline-offset: 5px; user-select: none; transition: color .15s; }
+.direct code a.cal::after, .direct code a[data-ig]::after { content: " \2197"; color: var(--orange); }
+.direct code a.cal:hover, .direct code a[data-ig]:hover { color: var(--orange); }
 .copy { font: inherit; font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; border: 1.5px solid var(--line); background: transparent; color: var(--ink-2); cursor: pointer; }
 .copy:hover { border-color: var(--ink); color: var(--ink); }
 .form { display: grid; gap: 14px; padding: 28px; border-radius: 6px; background: var(--paper-2); }
