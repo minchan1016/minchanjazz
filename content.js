@@ -47,7 +47,7 @@ window.CONTENT = {
       desc: { en: "Minchan Kim Trio live with Hungarian saxophonist Tony Lakatos.", ko: "헝가리 색소포니스트 Tony Lakatos와 함께한 김민찬 트리오 라이브." } },
     { featured: true, grad: "g1", id: "p9S0IkI3BvQ", year: "2025",
       title: { en: "Jesse Davis Quartet with Antonio Hart, Jazz Forum, Tarrytown", ko: "Jesse Davis Quartet with Antonio Hart, Jazz Forum, 태리타운" },
-      desc: { en: "\"Minority\" (Gigi Gryce). Two alto saxophones, one rhythm section, no set list. February 2025.", ko: "\"Minority\"(Gigi Gryce). 알토 색소폰 둘, 리듬 섹션 하나, 세트리스트 없음. 2025년 2월." } },
+      desc: { en: "\"Minority\" (Gigi Gryce). Live in New York with alto saxophonists Jesse Davis and Antonio Hart: two altos, one rhythm section, no set list. February 2025.", ko: "\"Minority\"(Gigi Gryce). 뉴욕에서 알토 색소포니스트 Jesse Davis, Antonio Hart와 함께한 라이브 연주. 알토 색소폰 둘, 리듬 섹션 하나, 세트리스트 없음. 2025년 2월." } },
     { featured: false, grad: "g2", id: "-IXNskx_lUs", year: "",
       title: { en: "Tony Lakatos Quartet, \"Broadway\"", ko: "Tony Lakatos Quartet, \"Broadway\"" },
       desc: { en: "With Hungarian saxophonist Tony Lakatos, one of the European masters I keep coming back to.", ko: "헝가리 색소포니스트 Tony Lakatos와 함께. 제가 계속 돌아가게 되는 유럽의 거장 중 한 사람입니다." } },
