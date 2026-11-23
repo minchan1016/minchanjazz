@@ -53,7 +53,7 @@ window.CONTENT = {
       desc: { en: "With Hungarian saxophonist Tony Lakatos, one of the European masters I keep coming back to.", ko: "헝가리 색소포니스트 Tony Lakatos와 함께. 제가 계속 돌아가게 되는 유럽의 거장 중 한 사람입니다." } },
     { featured: true, grad: "g3", id: "fyL90PFDfqc", year: "",
       title: { en: "Kenny Washington Quartet, live at Birdland Neuburg", ko: "Kenny Washington Quartet, Birdland Neuburg 라이브" },
-      desc: { en: "A full set with vocalist Kenny Washington in Germany.", ko: "보컬리스트 Kenny Washington과 독일에서 함께한 풀 세트." } },
+      desc: { en: "A full set with vocalist Kenny Washington at Birdland Neuburg, one of the oldest jazz clubs in Germany.", ko: "독일에서 가장 오래된 재즈클럽 중 하나인 Birdland Neuburg에서 보컬리스트 Kenny Washington과 함께한 풀 세트." } },
     { featured: false, grad: "g4", id: "4yz0rK8hI_U", year: "",
       title: { en: "Anthony Wonsey Trio with Kenny Washington, Meyhouse Jazz", ko: "Anthony Wonsey Trio with Kenny Washington, Meyhouse Jazz" },
       desc: { en: "Live stream from Meyhouse Jazz, with pianist Anthony Wonsey.", ko: "피아니스트 Anthony Wonsey와 함께한 Meyhouse Jazz 라이브 스트림." } },
