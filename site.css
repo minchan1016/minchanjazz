@@ -37,7 +37,6 @@ body.ko .display { font-family: var(--font-display-ko); text-transform: none; le
 /* ---------- motion ---------- */
 @keyframes rise { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
 @keyframes hit { 0%, 100% { transform: scale(1); opacity: .35; } 8% { transform: scale(1.45); opacity: 1; } 30% { transform: scale(1); opacity: .35; } }
-@keyframes countin { from { opacity: .18; } to { opacity: 1; } }
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes wobble { 0%,100% { transform: rotate(0) } 25% { transform: rotate(-3deg) scale(1.02) } 75% { transform: rotate(3deg) scale(1.02) } }
 @keyframes scroll { to { transform: translateX(-50%); } }
@@ -98,12 +97,6 @@ body.ko .hero h1 { font-size: clamp(60px, 10vw, 136px); line-height: 1.02; }
 .hero .lede .lp { display: block; }
 .hero .lede .lp + .lp { margin-top: .75em; }
 .hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
-.groove { margin-top: 40px; display: grid; gap: 10px; }
-.countin { font-family: var(--font-display); font-size: 15px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-2); display: flex; gap: 12px; }
-.countin span { opacity: .18; animation: countin .05s linear forwards; }
-.countin span:nth-child(1) { animation-delay: calc(var(--beat) * 1); } .countin span:nth-child(2) { animation-delay: calc(var(--beat) * 2); }
-.countin span:nth-child(3) { animation-delay: calc(var(--beat) * 3); } .countin span:nth-child(4) { animation-delay: calc(var(--beat) * 3.5); }
-.countin span:nth-child(5) { animation-delay: calc(var(--beat) * 4); } .countin span:nth-child(6) { animation-delay: calc(var(--beat) * 4.5); }
 .visual { position: relative; min-height: 540px; }
 .visual .stripe { position: absolute; right: 0; top: 0; bottom: 0; width: 34%; background: var(--stripe); border-radius: 4px; overflow: hidden; box-shadow: 0 30px 60px -40px rgba(0,0,0,.45); }
 .visual .stripe .tag { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%) rotate(180deg); writing-mode: vertical-rl; font-family: var(--font-display); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.85); white-space: nowrap; }
