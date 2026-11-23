@@ -65,14 +65,19 @@ body.ko .display { font-family: var(--font-display-ko); text-transform: none; le
 .lang button.on { background: var(--ink); color: var(--paper); }
 .menu-btn { display: none; }
 .navr { display: flex; gap: 10px; align-items: center; }
-@media (max-width: 860px) {
+@media (max-width: 1180px) {
   .links { display: none; }
   .links.open { display: flex; position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; align-items: flex-start; gap: 0; background: var(--paper); border-bottom: 1px solid var(--line); padding: 8px clamp(16px, 4vw, 48px) 16px; }
   .links.open a { padding: 10px 0; font-size: 16px; } .links.open a::after { display: none; }
   .menu-btn { display: inline-flex; padding: 8px 12px; }
   .nav .wrap { position: relative; }
+}
+@media (max-width: 860px) {
   .nav .btn.solid { display: none; }
   .mark { font-size: 17px; padding: 5px 16px; }
+}
+@media (min-width: 1181px) and (max-width: 1320px) { .links { gap: 14px; } .links a { font-size: 13px; } }
+.links a, .mark span, .lang button, .navr .btn { white-space: nowrap; }
 }
 
 /* ---------- eyebrow / headings ---------- */
@@ -369,3 +374,12 @@ footer nav a { text-decoration: none; font-weight: 600; color: var(--ink-2); }
 .pagehead .head { margin-bottom: 0; }
 .crumb { font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); text-decoration: none; }
 body.ko .crumb { letter-spacing: .04em; }
+
+/* profile & photos downloads */
+#profile .side { display: grid; gap: 10px; align-content: start; }
+.photohead { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin: 48px 0 18px; }
+.photohead h3 { margin: 0; font-family: var(--font-display); font-size: clamp(26px, 3vw, 36px); text-transform: uppercase; letter-spacing: .02em; }
+.photos .dl { position: absolute; right: 10px; top: 10px; padding: 7px 12px; border-radius: 999px; background: rgba(21,19,15,.82); color: #EDE9DE; font-size: 12px; font-weight: 800; letter-spacing: .04em; text-decoration: none; }
+.photos .dl:hover, .photos .dl:focus-visible { background: var(--orange); color: #15130f; }
+
+.photos { grid-auto-flow: dense; }

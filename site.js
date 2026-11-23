@@ -74,7 +74,7 @@
   function renderPhotos() {
     var box = document.getElementById('photoGrid'); if (!box || !C.photos) return;
     box.innerHTML = C.photos.map(function (p) {
-      return '<figure class="' + (p.wide ? 'wide' : '') + '"><img src="' + esc(p.src) + '" alt="' + esc(p.alt) + '" loading="lazy">' + (p.credit ? '<figcaption>© ' + esc(p.credit) + '</figcaption>' : '') + '</figure>';
+      return '<figure class="' + (p.wide ? 'wide' : '') + '"><img src="' + esc(p.src) + '" alt="' + esc(p.alt) + '" loading="lazy">' + (p.credit ? '<figcaption>© ' + esc(p.credit) + '</figcaption>' : '') + '<a class="dl" href="' + esc(p.src) + '" download="minchan-kim-' + esc(p.src.split('/').pop()) + '">' + (lang === 'ko' ? '다운로드' : 'Download') + ' ↓</a></figure>';
     }).join('');
   }
   var STATUS = { endorsed: { en: 'Endorsing', ko: '공식 파트너' }, using: { en: 'What I use', ko: '쓰고 있는 것' }, recommend: { en: 'I recommend', ko: '추천' } };
