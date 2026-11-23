@@ -104,14 +104,6 @@ body.ko .hero h1 { font-size: clamp(60px, 10vw, 136px); line-height: 1.02; }
 .countin span:nth-child(1) { animation-delay: calc(var(--beat) * 1); } .countin span:nth-child(2) { animation-delay: calc(var(--beat) * 2); }
 .countin span:nth-child(3) { animation-delay: calc(var(--beat) * 3); } .countin span:nth-child(4) { animation-delay: calc(var(--beat) * 3.5); }
 .countin span:nth-child(5) { animation-delay: calc(var(--beat) * 4); } .countin span:nth-child(6) { animation-delay: calc(var(--beat) * 4.5); }
-.ride { display: flex; align-items: center; gap: 14px; }
-.ride .dots { display: flex; align-items: center; gap: 10px; }
-.ride .d { width: 14px; height: 14px; border-radius: 50%; background: var(--ink); opacity: .35; animation: hit calc(var(--beat) * 4) linear infinite; }
-.ride .d.s { width: 8px; height: 8px; background: var(--orange); }
-.ride .d:nth-child(1) { animation-delay: calc(var(--beat) * 5); } .ride .d:nth-child(2) { animation-delay: calc(var(--beat) * 6); }
-.ride .d:nth-child(3) { animation-delay: calc(var(--beat) * 6.667); } .ride .d:nth-child(4) { animation-delay: calc(var(--beat) * 7); }
-.ride .d:nth-child(5) { animation-delay: calc(var(--beat) * 8); } .ride .d:nth-child(6) { animation-delay: calc(var(--beat) * 8.667); }
-.ride .lbl { font-size: 11px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 .visual { position: relative; min-height: 540px; }
 .visual .stripe { position: absolute; right: 0; top: 0; bottom: 0; width: 34%; background: var(--stripe); border-radius: 4px; overflow: hidden; box-shadow: 0 30px 60px -40px rgba(0,0,0,.45); }
 .visual .stripe .tag { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%) rotate(180deg); writing-mode: vertical-rl; font-family: var(--font-display); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.85); white-space: nowrap; }
