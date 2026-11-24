@@ -388,3 +388,5 @@ body.ko .crumb { letter-spacing: .04em; }
 #profile .kitlabel:first-child { margin-top: 0; }
 #profile .dlrow { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 #profile .dlrow .btn { justify-content: center; text-align: center; padding-left: 12px; padding-right: 12px; }
+#profile .biotools { margin-top: 22px; display: grid; gap: 10px; }
+#profile .biobtns { display: flex; flex-wrap: wrap; gap: 10px; }
